@@ -1,0 +1,143 @@
+:root {
+  --bg-white: #ffffff;
+  --body-bg: #f5f5f9;
+
+  --text-primary: #22303EEE;
+  --text-secondary: #22303EB3;
+  --text-disabled: #22303E66;
+  --chip-background: #22303E14;
+  --divider: #22303E1F;
+
+  --success-main: #71DD37;
+  --success-opacity-main: #71DD373D;
+
+  --error-main: #FF3E1D;
+  --error-opacity-darker: #FF3E1D61;
+
+  --info-opacity-darker: #03C3EC61;
+  --info-opacity-light: #03C3EC29;
+  --info-main: #03C3EC;
+
+  --primary-main: #696CFF;
+
+  --warning-opacity-darker: #FFAB0061;
+  --warning-opacity-main: #FFBC333D;
+  --warning-main: #FFBC33;
+
+  --shadow-md: 0px 3px 8px rgba(20, 20, 29, 0.22);
+  --primary-shadow-sm: 0px 2px 4px rgba(105, 108, 255, 0.4);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--body-bg);
+  font-family: "Public Sans", sans-serif;
+}
+
+body a {
+  text-decoration: none;
+}
+
+.dashboard-central-inteligencia {
+  padding: 0 2rem 0 2rem;
+}
+
+.dashboard-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.dashboard-central-inteligencia .card {
+  background-color: var(--bg-white);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-md);
+  border: 0;
+}
+
+.mrr {
+  border-bottom: 3px solid var(--primary-main) !important;
+}
+
+.assinantes {
+  border-bottom: 3px solid var(--warning-opacity-darker) !important;
+}
+
+.vendas {
+  border-bottom: 3px solid var(--error-opacity-darker) !important;
+}
+
+.frequencia {
+  border-bottom: 3px solid var(--info-opacity-darker) !important;
+}
+
+.card-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card .card-title h4 {
+  color: var(--text-primary);
+}
+
+.date-filter-dropdown .date-filter,
+.date-filter-dropdown .dropdown-toggle {
+  border: 0;
+  border-radius: 4px;
+  padding: 6px 10px;
+  background-color: var(--chip-background);
+  color: var(--text-secondary);
+}
+
+.card p {
+  font-weight: 800;
+}
+
+.card p,
+.card .meta {
+  color: var(--text-secondary);
+}
+
+.card .card-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.negative {
+  color: var(--error-main);
+}
+
+.positive {
+  color: var(--success-main);
+}
+
+.card .card-content span {
+  font-weight: 500;
+}
+
+.percentual {
+  display: flex;
+  align-items: center;
+}
+
+.porcentagem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.progress {
+  height: 6px !important;
+  width: 80%;
+}
+
+.progress-bar {
+  background-color: var(--primary-main) !important;
+  box-shadow: var(--primary-shadow-sm);
+}
