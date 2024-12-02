@@ -100,8 +100,20 @@ body a {
 }
 
 .card p,
-.card .meta {
+.card .meta, .previsao {
   color: var(--text-secondary);
+}
+
+.previsao {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.card-title button {
+  border: 0;
+  background-color: transparent;
 }
 
 .card .card-content {
