@@ -176,8 +176,126 @@
           </div>
         </div>
       </div>
+      <div class="row gap-3" style="padding: 0 12px 0 12px;">
+        <div class="col-12 col-xl-6 d-flex flex-column gap-3">
+          <div class="row vendas-cancelamento">
+            <div class="vendas-header">
+              <h5>Entradas x Saídas</h5>
+              <div class="date-filter-dropdown">
+                <button type="button" class="date-filter">2024</button>
+                <button type="button" class="dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown">
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                    </hr>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Separated link</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="sales-chart">
+              <canvas id="vendasCancelamentos"></canvas>
+            </div>
+          </div>
+          <div class="row historico-mrr">
+            <div class="historico-header">
+              <h5>Atendimentos</h5>
+              <div class="date-filter-dropdown">
+                <button type="button" class="date-filter">2024</button>
+                <button type="button" class="dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown">
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                    </hr>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Separated link</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="historical-chart">
+              <canvas id="historicoMRR"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="categorias container col">
+          <div class="categorias-header d-flex justify-content-between">
+            <h5>Resultados por categoria</h5>
+            <div class="date-filter-dropdown">
+              <button type="button" class="date-filter">2024</button>
+              <button type="button" class="dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown">
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                  </hr>
+                </li>
+                <li><a class="dropdown-item" href="#">Separated link</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="categorias-valor-grafico">
+            <div>
+              <h3>R$24.000</h3>
+              <span>Incluindo assinaturas</span>
+            </div>
+            <div class="categorias-chart">
+              <canvas width="120" id="categorias"></canvas>
+            </div>
+          </div>
+          <div class="categorias-content">
+            <div class="categorias-row">
+              <div class="d-flex gap-2 align-items-center">
+                <img src="assets/Icon.png" alt="">
+                <p>Serviço</p>
+              </div>
+              <div style="display: flex; gap: 4rem;">
+                <div class="d-flex align-items-center gap-4">
+                  <div class="progress" style="width: 12rem;" role="progressbar">
+                    <div class="progress-bar" style="width: 67%;"></div>
+                  </div>
+                  <span>67%</span>
+                </div>
+                <span>822</span>
+              </div>
+            </div>
+            <div class="categorias-row">
+              <div class="d-flex gap-2 align-items-center">
+                <img src="assets/Icon (1).png" alt="">
+                <p>Produtos</p>
+              </div>
+              <span>549</span>
+            </div>
+            <div class="categorias-row">
+              <div class="d-flex gap-2 align-items-center">
+                <img src="assets/Icon (2).png" alt="">
+                <p>Assinaturas</p>
+              </div>
+              <span>328</span>
+            </div>
+            <div class="categorias-row">
+              <div class="d-flex gap-2 align-items-center">
+                <img src="assets/Icon (3).png" alt="">
+                <p>Pacotes</p>
+              </div>
+              <span>297</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="script.js"></script>
 </body>
 
