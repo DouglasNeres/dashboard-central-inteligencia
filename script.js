@@ -1,23 +1,140 @@
-  const eyeOpen = document.querySelector(".bi-eye");
-  const eyeClosed = document.querySelector(".bi-eye-slash");
-  
-  eyeClosed.addEventListener("click", function () {
-    toggleVisibility();
-    eyeClosed.style.display = "none"; 
-    eyeOpen.style.display = "inline"; 
-  });
+const eyeOpen = document.querySelector(".bi-eye");
+const eyeClosed = document.querySelector(".bi-eye-slash");
 
-  eyeOpen.addEventListener("click", function () {
+eyeClosed.addEventListener("click", function () {
     toggleVisibility();
-    eyeOpen.style.display = "none"; 
-    eyeClosed.style.display = "inline"; 
-  });
+    eyeClosed.style.display = "none";
+    eyeOpen.style.display = "inline";
+});
 
-  function toggleVisibility() {
+eyeOpen.addEventListener("click", function () {
+    toggleVisibility();
+    eyeOpen.style.display = "none";
+    eyeClosed.style.display = "inline";
+});
+
+function toggleVisibility() {
     const visibleValues = document.querySelectorAll(".visible-value");
     const hiddenValues = document.querySelectorAll(".hidden-value");
 
     // Alterna a visibilidade de elementos visíveis e ocultos
     visibleValues.forEach(el => el.style.display = el.style.display === "none" ? "block" : "none");
     hiddenValues.forEach(el => el.style.display = el.style.display === "none" ? "block" : "none");
-  }
+}
+
+const vendasChart = document.getElementById('vendasCancelamentos').getContext('2d');
+const historicoChart = document.getElementById('historicoMRR').getContext('2d');
+const categoriasChart = document.getElementById('categorias').getContext('2d');
+
+new Chart(vendasChart, {
+    type: 'bar',
+    data: {
+        labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Maio', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dev'],
+        datasets: [
+            {
+                label: 'Vendas',
+                data: [10, 20, 5, 30, 4, 5, 20, 15, 40, 20, 30, 35],
+                backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 1
+            },
+            {
+                label: 'Cancelamentos',
+                data: [5, 15, 30, 18, 10, 20, 3, 10, 20, 5, 10, 20],
+                backgroundColor: 'rgba(255, 99, 132, 0.5)',
+                borderColor: 'rgba(255, 99, 132, 1)',
+                borderWidth: 1
+            }
+        ],
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                position: 'top',
+            },
+            tooltip: {
+                mode: 'index',
+                intersect: false,
+            }
+        },
+        scales: {
+            x: {
+                stacked: false
+            },
+            y: {
+                stacked: false,
+                beginAtZero: true
+            }
+        }
+    }
+});
+
+new Chart(historicoChart, {
+    type: 'line',
+    data: {
+        labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Maio', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+        datasets: [{
+            label: 'Histórico de MRR',
+            data: [10, 20, 15, 25, 10, 35, 25, 30, 15, 30, 40, 50], // Substitua pelos seus dados
+            borderColor: '#f6c23e', // Cor da linha
+            backgroundColor: 'rgba(246, 194, 62, 0.2)', // Cor de preenchimento abaixo da linha
+            tension: 0.4, // Suaviza as curvas
+            pointBackgroundColor: '#f6c23e', // Cor dos pontos
+            pointBorderWidth: 2,
+            pointRadius: function (context) {
+                // Destacar o maior ponto
+                const index = context.dataIndex;
+                const value = context.dataset.data[index];
+                return value === Math.max(...context.dataset.data) ? 8 : 4;
+            },
+            pointHoverRadius: 10
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                position: 'top',
+            },
+            tooltip: {
+                mode: 'index',
+                intersect: false,
+            }
+        },
+        scales: {
+            x: {
+                stacked: false
+            },
+            y: {
+                stacked: false,
+                beginAtZero: true
+            }
+        }
+    }
+})
+
+new Chart(categoriasChart, {
+    type: 'doughnut',
+    data: {
+        labels: ['Serviços', 'Produtos', 'Assinaturas', 'Pacotes'], 
+        datasets: [{
+            data: [50, 35, 20, 15],
+            backgroundColor: ['#6c63ff', '#37d67a', '#03C3EC', '#7e8c99'],
+            borderWidth: 0
+        }]
+    },
+    options: {
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                display: false // Remove a legenda para se parecer mais com o exemplo
+            },
+
+        },
+        cutout: '75%', // Torna o centro do gráfico vazio (ajusta o tamanho do donut)
+        responsive: true,
+    }
+})
