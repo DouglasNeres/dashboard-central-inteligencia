@@ -17,10 +17,25 @@ function toggleVisibility() {
     const visibleValues = document.querySelectorAll(".visible-value");
     const hiddenValues = document.querySelectorAll(".hidden-value");
 
-    // Alterna a visibilidade de elementos visíveis e ocultos
     visibleValues.forEach(el => el.style.display = el.style.display === "none" ? "block" : "none");
     hiddenValues.forEach(el => el.style.display = el.style.display === "none" ? "block" : "none");
 }
+
+document.querySelectorAll('.container').forEach((container) => {
+    const tabs = container.querySelectorAll('.tab');
+    const tables = container.querySelectorAll('.table');
+  
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        tabs.forEach((t) => t.classList.remove('active'));
+        tables.forEach((table) => table.classList.remove('active'));
+  
+        tab.classList.add('active');
+        const targetTable = container.querySelector(tab.getAttribute('data-target'));
+        targetTable.classList.add('active');
+      });
+    });
+  });
 
 const vendasChart = document.getElementById('vendasCancelamentos').getContext('2d');
 const historicoChart = document.getElementById('historicoMRR').getContext('2d');
@@ -119,7 +134,7 @@ new Chart(historicoChart, {
 new Chart(categoriasChart, {
     type: 'doughnut',
     data: {
-        labels: ['Serviços', 'Produtos', 'Assinaturas', 'Pacotes'], 
+        labels: ['Serviços', 'Produtos', 'Assinaturas', 'Pacotes'],
         datasets: [{
             data: [50, 35, 20, 15],
             backgroundColor: ['#6c63ff', '#37d67a', '#03C3EC', '#7e8c99'],
