@@ -100,7 +100,8 @@ body a {
 }
 
 .card p,
-.card .meta, .previsao {
+.card .meta,
+.previsao {
   color: var(--text-secondary);
 }
 
@@ -152,6 +153,14 @@ body a {
 .progress-bar {
   background-color: var(--primary-main) !important;
   box-shadow: var(--primary-shadow-sm);
+}
+
+.progressbar-mobile {
+  display: none;
+  max-width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
 }
 
 .vendas-cancelamento,
@@ -324,7 +333,7 @@ th {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 1rem 1.25rem !important; 
+  padding: 1rem 1.25rem !important;
 }
 
 .categorias-header {
@@ -341,11 +350,11 @@ th {
   justify-content: space-between;
 }
 
-.categorias-valor-grafico h3{
+.categorias-valor-grafico h3 {
   color: var(--text-primary);
 }
 
-.categorias-valor-grafico span{
+.categorias-valor-grafico span {
   color: var(--text-secondary);
   font-style: italic;
 }
@@ -362,6 +371,52 @@ th {
   margin: 0 !important;
 }
 
-.categorias-row p, .categorias-row span{
+.categorias-row p,
+.categorias-row span {
   color: var(--text-primary);
+}
+
+@media (max-width: 1200px) {
+  .vendas-cancelamento,
+  .historico-mrr {
+    margin-right: calc(-.5* var(--bs-gutter-x)) !important;
+  }
+
+  .right-cards {
+    padding-left: 0 !important;
+  }
+
+  .tables {
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .tickets {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 580px) {
+  .categorias-row .progress {
+    width: 5rem !important;
+  }
+  
+  .desempenho {
+    gap: 1rem !important;
+  }
+}
+
+@media (max-width: 425px) {
+  .percentual-mobile {
+    display: block
+  }
+
+  .desempenho-progress {
+    display: none !important;
+  }
+
+  .progressbar-mobile {
+    display: flex;
+  }
 }
