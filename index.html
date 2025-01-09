@@ -260,41 +260,83 @@
                 <p>Serviço</p>
               </div>
               <div class="desempenho" style="display: flex; gap: 4rem;">
+                <span>822</span>
                 <div class="desempenho-progress" style="display: flex; align-items: center; gap: .5rem;">
                   <div class="progress" style="width: 12rem;" role="progressbar">
                     <div class="progress-bar" style="width: 67%;"></div>
                   </div>
                   <span>67%</span>
                 </div>
-                <span>822</span>
               </div>
             </div>
             <div class="progressbar-mobile">
-            <div class="progress" role="progressbar">
-              <div class="progress-bar" style="width: 67%;"></div>
+              <div class="progress" role="progressbar">
+                <div class="progress-bar" style="width: 67%;"></div>
+              </div>
+              <span>67%</span>
             </div>
-            <span>67%</span>
-          </div>
             <div class="categorias-row">
               <div class="d-flex gap-2 align-items-center">
                 <img src="assets/Icon (1).png" alt="">
                 <p>Produtos</p>
               </div>
-              <span>549</span>
+              <div class="desempenho" style="display: flex; gap: 4rem;">
+                <span>549</span>
+                <div class="desempenho-progress" style="display: flex; align-items: center; gap: .5rem;">
+                  <div class="progress" style="width: 12rem;" role="progressbar">
+                    <div class="progress-bar" style="width: 76%;"></div>
+                  </div>
+                  <span>76%</span>
+                </div>
+              </div>
+            </div>
+            <div class="progressbar-mobile">
+              <div class="progress" role="progressbar">
+                <div class="progress-bar" style="width: 76%;"></div>
+              </div>
+              <span>76%</span>
             </div>
             <div class="categorias-row">
               <div class="d-flex gap-2 align-items-center">
                 <img src="assets/Icon (2).png" alt="">
                 <p>Assinaturas</p>
               </div>
-              <span>328</span>
+              <div class="desempenho" style="display: flex; gap: 4rem;">
+                <span>328</span>
+                <div class="desempenho-progress" style="display: flex; align-items: center; gap: .5rem;">
+                  <div class="progress" style="width: 12rem;" role="progressbar">
+                    <div class="progress-bar" style="width: 45%;"></div>
+                  </div>
+                  <span>45%</span>
+                </div>
+              </div>
+            </div>
+            <div class="progressbar-mobile">
+              <div class="progress" role="progressbar">
+                <div class="progress-bar" style="width: 45%;"></div>
+              </div>
+              <span>45%</span>
             </div>
             <div class="categorias-row">
               <div class="d-flex gap-2 align-items-center">
                 <img src="assets/Icon (3).png" alt="">
                 <p>Pacotes</p>
               </div>
-              <span>297</span>
+              <div class="desempenho" style="display: flex; gap: 4rem;">
+                <span>297</span>
+                <div class="desempenho-progress" style="display: flex; align-items: center; gap: .5rem;">
+                  <div class="progress" style="width: 12rem;" role="progressbar">
+                    <div class="progress-bar" style="width: 37%;"></div>
+                  </div>
+                  <span>37%</span>
+                </div>
+              </div>
+            </div>
+            <div class="progressbar-mobile">
+              <div class="progress" role="progressbar">
+                <div class="progress-bar" style="width: 37%;"></div>
+              </div>
+              <span>37%</span>
             </div>
           </div>
         </div>
@@ -302,7 +344,7 @@
       <div class="row" style="padding: 0 12px 0 12px;">
         <div class="container col">
           <div class="container-header">
-            <h5>Central de Inteligência</h5>
+            <h5>Profissionais</h5>
             <div class="date-filter-dropdown">
               <button type="button" class="date-filter">Nov</button>
               <button type="button" class="dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown">
@@ -328,178 +370,150 @@
             <table id="tab1" class="table active">
               <thead>
                 <tr>
-                  <th>Plano</th>
-                  <th>Vendas</th>
-                  <th>Receita</th>
-                  <th>Percentual</th>
+                  <th>Nome</th>
+                  <th>Serviços</th>
+                  <th>Produtos</th>
+                  <th>Total</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td id="plano">Duo</td>
-                  <td id="vendas">43</td>
-                  <td id="receita-vendas">18.92k</td>
-                  <td>
-                    <div class="progress-container">
-                      <div class="table-percentual">
-                        <div class="progress-fill uc" style="width: 80.50%;"></div>
-                      </div>
-                      <span class="progress-value">80.50%</span>
-                    </div>
-                  </td>
+                  <td id="nome"><img src="assets/pessoa.png" style="height: 3rem;" /> Francimar Alvez</td>
+                  <td id="serviços">Corte Navalhado</td>
+                  <td id="produtos">Tesoura Flex</td>
+                  <td id="total">423</td>
                 </tr>
                 <tr>
-                  <td id="plano">Pro</td>
-                  <td id="vendas">44</td>
-                  <td id="receita-vendas">28.92k</td>
-                  <td>
-                    <div class="progress-container">
-                      <div class="table-percentual">
-                        <div class="progress-fill opera" style="width: 80.50%;"></div>
-                      </div>
-                      <span class="progress-value">80.50%</span>
-                    </div>
-                  </td>
+                  <td id="nome"><img src="assets/pessoa.png" style="height: 3rem;" /> Fernando Torres</td>
+                  <td id="serviços">Corte Degradê</td>
+                  <td id="produtos">Gel de Cabelo</td>
+                  <td id="total">232</td>
                 </tr>
                 <tr>
-                  <td id="plano">Duo</td>
-                  <td id="vendas">33</td>
-                  <td id="receita-vendas">22.29k</td>
-                  <td>
-                    <div class="progress-container">
-                      <div class="table-percentual">
-                        <div class="progress-fill safari" style="width: 65.09%;"></div>
-                      </div>
-                      <span class="progress-value">65.09%</span>
-                    </div>
-                  </td>
+                  <td id="nome"><img src="assets/pessoa.png" style="height: 3rem;" /> Fernanda Lima</td>
+                  <td id="serviços">Corte Moicano</td>
+                  <td id="produtos">Massa Modeladora Capilar</td>
+                  <td id="total">334</td>
                 </tr>
                 <tr>
-                  <td id="plano">Solo</td>
-                  <td id="vendas">55</td>
-                  <td id="receita-vendas">28.99k</td>
-                  <td>
-                    <div class="progress-container">
-                      <div class="table-percentual">
-                        <div class="progress-fill edge" style="width: 70.50%;"></div>
-                      </div>
-                      <span class="progress-value">70.50%</span>
-                    </div>
-                  </td>
+                  <td id="nome"><img src="assets/pessoa.png" style="height: 3rem;" /> Bruno Sousa</td>
+                  <td id="serviços">Corte Navalhado</td>
+                  <td id="produtos">Tesoura Flex</td>
+                  <td id="total">433</td>
                 </tr>
                 <tr>
-                  <td id="plano">Solo</td>
-                  <td id="vendas">87</td>
-                  <td id="receita-vendas">43.11k</td>
-                  <td>
-                    <div class="progress-container">
-                      <div class="table-percentual">
-                        <div class="progress-fill firefox" style="width: 55.23%;"></div>
-                      </div>
-                      <span class="progress-value">55.23%</span>
-                    </div>
-                  </td>
+                  <td id="nome"><img src="assets/pessoa.png" style="height: 3rem;" /> Julia Gonçalves</td>
+                  <td id="serviços">Penteado Blindado</td>
+                  <td id="produtos">Barbeador</td>
+                  <td id="total">493</td>
                 </tr>
                 <tr>
-                  <td id="plano">Pro</td>
-                  <td id="vendas">32</td>
-                  <td id="receita-vendas">11.90k</td>
-                  <td>
-                    <div class="progress-container">
-                      <div class="table-percentual">
-                        <div class="progress-fill chrome" style="width: 30.50%;"></div>
-                      </div>
-                      <span class="progress-value">30.50%</span>
-                    </div>
-                  </td>
+                  <td id="nome"><img src="assets/pessoa.png" style="height: 3rem;" /> Gabriel Tavares</td>
+                  <td id="serviços">Corte Americano</td>
+                  <td id="produtos">Gel</td>
+                  <td id="total">123</td>
                 </tr>
               </tbody>
             </table>
             <table id="tab2" class="table">
               <thead>
                 <tr>
-                  <th>Plano</th>
-                  <th>Cancelamentos</th>
-                  <th>Receita Perdida</th>
-                  <th>Percentual</th>
+                  <th>Nome</th>
+                  <th>Trabalhado</th>
+                  <th>Perdido</th>
+                  <th>Disponivel</th>
+                  <th>Folga</th>
+                  <th>Taxa de Ocupação</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td id="plano">Solo</td>
-                  <td id="cancelamentos">389</td>
-                  <td id="receita-perdida">15.20k</td>
-                  <td>
+                  <td id="nome"><img src="assets/pessoa.png" style="height: 3rem;" />Solo</td>
+                  <td id="trabalhado">33 / 120h</td>
+                  <td id="perdido">40h</td>
+                  <td id="disponivel">20h</td>
+                  <td id="folga">10h</td>
+                  <td id="taxa-ocupacao">
                     <div class="progress-container">
                       <div class="table-percentual">
-                        <div class="progress-fill uc" style="width: 50.50%;"></div>
+                        <div class="progress-fill opera" style="width: 50.50%;"></div>
                       </div>
                       <span class="progress-value">50.50%</span>
                     </div>
                   </td>
                 </tr>
                 <tr>
-                  <td id="plano">Pro</td>
-                  <td id="cancelamentos">34</td>
-                  <td id="receita-perdida">11.20k</td>
-                  <td>
+                  <td id="nome"><img src="assets/pessoa.png" style="height: 3rem;" /> Julia Gonçalves</td>
+                  <td id="trabalhado">28 / 100h</td>
+                  <td id="perdido">20h</td>
+                  <td id="disponivel">40h</td>
+                  <td id="folga">15h</td>
+                  <td id="taxa-ocupacao">
                     <div class="progress-container">
                       <div class="table-percentual">
-                        <div class="progress-fill opera" style="width: 66.50%;"></div>
+                        <div class="progress-fill chrome" style="width: 70.50%;"></div>
                       </div>
-                      <span class="progress-value">66.50%</span>
+                      <span class="progress-value">70.50%</span>
                     </div>
                   </td>
                 </tr>
                 <tr>
-                  <td id="plano">Duo</td>
-                  <td id="cancelamentos">89</td>
-                  <td id="receita-perdida">20.06k</td>
-                  <td>
+                  <td id="nome"><img src="assets/pessoa.png" style="height: 3rem;" /> Fernando Torres</td>
+                  <td id="trabalhado">33 / 120h</td>
+                  <td id="perdido">10h</td>
+                  <td id="disponivel">44h</td>
+                  <td id="folga">20h</td>
+                  <td id="taxa-ocupacao">
                     <div class="progress-container">
                       <div class="table-percentual">
-                        <div class="progress-fill safari" style="width: 50.50%;"></div>
+                        <div class="progress-fill firefox" style="width: 50.50%;"></div>
                       </div>
                       <span class="progress-value">50.50%</span>
                     </div>
                   </td>
                 </tr>
                 <tr>
-                  <td id="plano">Solo</td>
-                  <td id="cancelamentos">90</td>
-                  <td id="receita-perdida">35.90k</td>
-                  <td>
+                  <td id="nome"><img src="assets/pessoa.png" style="height: 3rem;" /> Francimar Alvez</td>
+                  <td id="trabalhado">22 / 80h</td>
+                  <td id="perdido">60h</td>
+                  <td id="disponivel">40h</td>
+                  <td id="folga">22h</td>
+                  <td id="taxa-ocupacao">
                     <div class="progress-container">
                       <div class="table-percentual">
-                        <div class="progress-fill edge" style="width: 91.55%;"></div>
+                        <div class="progress-fill uc" style="width: 40.20%;"></div>
                       </div>
-                      <span class="progress-value">91.55%</span>
+                      <span class="progress-value">40.20%</span>
                     </div>
                   </td>
                 </tr>
                 <tr>
-                  <td id="plano">Pro</td>
-                  <td id="cancelamentos">39</td>
-                  <td id="receita-perdida">23.80k</td>
-                  <td>
+                  <td id="nome"><img src="assets/pessoa.png" style="height: 3rem;" /> Fernanda Lima</td>
+                  <td id="trabalhado">40 / 180h</td>
+                  <td id="perdido">30h</td>
+                  <td id="disponivel">16h</td>
+                  <td id="folga">4h</td>
+                  <td id="taxa-ocupacao">
                     <div class="progress-container">
                       <div class="table-percentual">
-                        <div class="progress-fill firefox" style="width: 57.30%;"></div>
+                        <div class="progress-fill edge" style="width: 65.0%;"></div>
                       </div>
-                      <span class="progress-value">57.30%</span>
+                      <span class="progress-value">65.0%</span>
                     </div>
                   </td>
                 </tr>
                 <tr>
-                  <td id="plano">Duo</td>
-                  <td id="cancelamentos">21</td>
-                  <td id="receita-perdida">5.20k</td>
-                  <td>
+                  <td id="nome"><img src="assets/pessoa.png" style="height: 3rem;" />Bruno Sousa</td>
+                  <td id="trabalhado">42 / 160h</td>
+                  <td id="perdido">10h</td>
+                  <td id="disponivel">48h</td>
+                  <td id="folga">22h</td>
+                  <td id="taxa-ocupacao">
                     <div class="progress-container">
                       <div class="table-percentual">
-                        <div class="progress-fill chrome" style="width: 62.50%;"></div>
+                        <div class="progress-fill opera" style="width: 23.50%;"></div>
                       </div>
-                      <span class="progress-value">62.50%</span>
+                      <span class="progress-value">23.50%</span>
                     </div>
                   </td>
                 </tr>
@@ -508,90 +522,41 @@
             <table id="tab3" class="table">
               <thead>
                 <tr>
-                  <th>Plano</th>
-                  <th>Total de Assinantes</th>
-                  <th>Receita Mensal</th>
-                  <th>Percentual</th>
+                  <th>Nome</th>
+                  <th>Nota Geral</th>
+                  <th>Nota no mês</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td id="plano">Solo</td>
-                  <td id="total-assinantes">220</td>
-                  <td id="receita-mensal">40.29k</td>
-                  <td>
-                    <div class="progress-container">
-                      <div class="table-percentual">
-                        <div class="progress-fill uc" style="width: 88.30%;"></div>
-                      </div>
-                      <span class="progress-value">88.30%</span>
-                    </div>
-                  </td>
+                  <td id="nome"><img src="assets/pessoa.png" style="height: 3rem;" />Bruno Sousa</td>
+                  <td id="nota-geral">4.87 / 100 avaliações</td>
+                  <td id="nota-mes">3.56 / 67 avaliações</td>
                 </tr>
                 <tr>
-                  <td id="plano">Pro</td>
-                  <td id="total-assinantes">304</td>
-                  <td id="receita-mensal">34.25k</td>
-                  <td>
-                    <div class="progress-container">
-                      <div class="table-percentual">
-                        <div class="progress-fill opera" style="width: 70.34%;"></div>
-                      </div>
-                      <span class="progress-value">70.34%</span>
-                    </div>
-                  </td>
+                  <td id="nome"><img src="assets/pessoa.png" style="height: 3rem;" />Ana Oliveira</td>
+                  <td id="nota-geral">4.75 / 89 avaliações</td>
+                  <td id="nota-mes">4.23 / 53 avaliações</td>
                 </tr>
                 <tr>
-                  <td id="plano">Solo</td>
-                  <td id="total-assinantes">38</td>
-                  <td id="receita-mensal">3.98k</td>
-                  <td>
-                    <div class="progress-container">
-                      <div class="table-percentual">
-                        <div class="progress-fill safari" style="width: 33.65%;"></div>
-                      </div>
-                      <span class="progress-value">33.65%</span>
-                    </div>
-                  </td>
+                  <td id="nome"><img src="assets/pessoa.png" style="height: 3rem;" />Carlos Pereira</td>
+                  <td id="nota-geral">4.91 / 112 avaliações</td>
+                  <td id="nota-mes">4.67 / 78 avaliações</td>
                 </tr>
                 <tr>
-                  <td id="plano">Duo</td>
-                  <td id="total-assinantes">126</td>
-                  <td id="receita-mensal">44.43k</td>
-                  <td>
-                    <div class="progress-container">
-                      <div class="table-percentual">
-                        <div class="progress-fill edge" style="width: 77.67%;"></div>
-                      </div>
-                      <span class="progress-value">77.67%</span>
-                    </div>
-                  </td>
+                  <td id="nome"><img src="assets/pessoa.png" style="height: 3rem;" />Fernanda Lima</td>
+                  <td id="nota-geral">4.65 / 98 avaliações</td>
+                  <td id="nota-mes">3.89 / 60 avaliações</td>
                 </tr>
                 <tr>
-                  <td id="plano">Solo</td>
-                  <td id="total-assinantes">54</td>
-                  <td id="receita-mensal">23.76k</td>
-                  <td>
-                    <div class="progress-container">
-                      <div class="table-percentual">
-                        <div class="progress-fill firefox" style="width: 65.98%;"></div>
-                      </div>
-                      <span class="progress-value">65.98%</span>
-                    </div>
-                  </td>
+                  <td id="nome"><img src="assets/pessoa.png" style="height: 3rem;" />Lucas Almeida</td>
+                  <td id="nota-geral">4.80 / 76 avaliações</td>
+                  <td id="nota-mes">4.55 / 50 avaliações</td>
                 </tr>
                 <tr>
-                  <td id="plano">Pro</td>
-                  <td id="total-assinantes">444</td>
-                  <td id="receita-mensal">50.65k</td>
-                  <td>
-                    <div class="progress-container">
-                      <div class="table-percentual">
-                        <div class="progress-fill chrome" style="width: 93.69%;"></div>
-                      </div>
-                      <span class="progress-value">93.69%</span>
-                    </div>
-                  </td>
+                  <td id="nome"><img src="assets/pessoa.png" style="height: 3rem;" />Mariana Costa</td>
+                  <td id="nota-geral">4.92 / 124 avaliações</td>
+                  <td id="nota-mes">4.78 / 90 avaliações</td>
                 </tr>
               </tbody>
             </table>
