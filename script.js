@@ -40,6 +40,8 @@ document.querySelectorAll('.container').forEach((container) => {
 const vendasChart = document.getElementById('vendasCancelamentos').getContext('2d');
 const historicoChart = document.getElementById('historicoMRR').getContext('2d');
 const categoriasChart = document.getElementById('categorias').getContext('2d');
+const diasDePicoChart = document.getElementById('diasDePicoChart').getContext('2d');
+const taxaOcupacaoChart = document.getElementById('taxaOcupacaoChart').getContext('2d');
 
 new Chart(vendasChart, {
     type: 'bar',
@@ -153,3 +155,69 @@ new Chart(categoriasChart, {
         responsive: true,
     }
 })
+
+new Chart(diasDePicoChart, {
+    type: 'bar',
+    data: {
+        labels: ['S', 'T', 'Q', 'Q', 'S', 'S', 'D'],
+        datasets: [
+            {
+                label: 'Dia de pico',
+                data: [5, 15, 30, 18, 10, 20, 3],
+                backgroundColor: 'rgba(255, 63, 29, 0.62)',
+                borderColor: 'rgb(255, 62, 29)',
+                borderWidth: 1
+            }
+        ],
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                position: 'top',
+            },
+            tooltip: {
+                mode: 'index',
+                intersect: false,
+            },
+            legend: {
+                display: false,
+              },
+        },
+        scales: {
+            x: {
+                stacked: false
+            },
+            y: {
+                stacked: false,
+                beginAtZero: true
+            }
+        }
+    }
+});
+
+new Chart(taxaOcupacaoChart, {
+    type: 'doughnut',
+    data: {
+        datasets: [{
+            data: [75, 25], // Valor e restante para completar 100
+            backgroundColor: ['#00d1ff', '#1e1e2f'], // Cor do progresso e fundo
+            borderWidth: 0,
+            cutout: '80%', // Faz o centro parecer oco
+            borderRadius: 2, // Arredonda as pontas
+            rotation: -90, // Inicia no topo
+            circumference: 180 // Mostra apenas metade do círculo
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            tooltip: { enabled: false }, // Remove tooltips
+          },
+          rotation: -90, // Ajusta o ponto inicial
+          circumference: 180, // Limita o gráfico a 180º
+    }
+    
+});

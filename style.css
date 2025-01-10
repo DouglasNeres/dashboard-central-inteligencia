@@ -376,6 +376,38 @@ th {
   color: var(--text-primary);
 }
 
+.cards-central {
+  position: relative;
+  left: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.avaliacao-card .taxa-ocupacao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avaliacao-card p {
+  margin-top: .8rem;
+}
+
+#taxaOcupacaoChart{
+  max-width: 10rem;
+}
+
+.avaliacao-card .porcentagem-taxa-ocupacao {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
 @media (max-width: 1200px) {
   .vendas-cancelamento,
   .historico-mrr {
@@ -388,6 +420,12 @@ th {
 
   .tables {
     gap: 1.25rem;
+  }
+
+  .cards-central {
+    top: 1rem;
+    left: 0;
+    padding: 0 !important;
   }
 }
 
@@ -418,5 +456,13 @@ th {
 
   .progressbar-mobile {
     display: flex;
+  }
+
+  .cards-central {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .avaliacao-card {
+    width: 100% !important;
   }
 }
