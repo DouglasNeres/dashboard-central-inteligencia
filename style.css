@@ -394,8 +394,20 @@ th {
   margin-top: .8rem;
 }
 
-#taxaOcupacaoChart{
+#taxaOcupacaoChart {
   max-width: 10rem;
+}
+
+.lista-avaliacao {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 8px;
+  padding: 0 !important;
+}
+
+.lista-avaliacao .star img {
+  width: 22px;
 }
 
 .avaliacao-card .porcentagem-taxa-ocupacao {
@@ -409,6 +421,7 @@ th {
 }
 
 @media (max-width: 1200px) {
+
   .vendas-cancelamento,
   .historico-mrr {
     margin-right: calc(-.5* var(--bs-gutter-x)) !important;
@@ -439,7 +452,7 @@ th {
   .categorias-row .progress {
     width: 5rem !important;
   }
-  
+
   .desempenho {
     gap: 1rem !important;
   }
@@ -462,6 +475,7 @@ th {
     display: flex;
     flex-wrap: wrap;
   }
+
   .avaliacao-card {
     width: 100% !important;
   }
