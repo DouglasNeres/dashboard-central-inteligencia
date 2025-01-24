@@ -394,7 +394,7 @@ th {
   margin-top: .8rem;
 }
 
-#taxaOcupacaoChart {
+#taxaOcupacaoChart, #statusClienteChart {
   max-width: 10rem;
 }
 
@@ -418,6 +418,41 @@ th {
   color: var(--text-primary);
   font-weight: 600;
   font-size: 1.25rem;
+}
+
+.status-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.status-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: var(--text-primary);
+}
+
+.status-list li::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.status-list li:nth-child(1)::before {
+  background-color: #4CAF50;
+}
+
+.status-list li:nth-child(2)::before {
+  background-color: #FFC107;
+}
+
+.status-list li:nth-child(3)::before {
+  background-color: #F44336;
 }
 
 @media (max-width: 1200px) {

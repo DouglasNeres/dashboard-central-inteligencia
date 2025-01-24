@@ -42,6 +42,7 @@ const historicoChart = document.getElementById('historicoMRR').getContext('2d');
 const categoriasChart = document.getElementById('categorias').getContext('2d');
 const diasDePicoChart = document.getElementById('diasDePicoChart').getContext('2d');
 const taxaOcupacaoChart = document.getElementById('taxaOcupacaoChart').getContext('2d');
+const statusClienteChart = document.getElementById('statusClienteChart').getContext('2d');
 
 new Chart(vendasChart, {
     type: 'bar',
@@ -221,3 +222,26 @@ new Chart(taxaOcupacaoChart, {
     }
     
 });
+
+new Chart(statusClienteChart, {
+    type: 'doughnut',
+    data: {
+        labels: ['Serviços', 'Produtos', 'Assinaturas', 'Pacotes'],
+        datasets: [{
+            data: [50, 35, 20],
+            backgroundColor: ['#4CAF50', '#FFC107', '#F44336'],
+            borderWidth: 0
+        }]
+    },
+    options: {
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                display: false
+            },
+
+        },
+        cutout: '75%',
+        responsive: true,
+    }
+})
