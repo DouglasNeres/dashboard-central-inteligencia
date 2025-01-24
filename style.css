@@ -394,7 +394,8 @@ th {
   margin-top: .8rem;
 }
 
-#taxaOcupacaoChart, #statusClienteChart {
+#taxaOcupacaoChart,
+#statusClienteChart {
   max-width: 10rem;
 }
 
@@ -455,8 +456,11 @@ th {
   background-color: #F44336;
 }
 
-@media (max-width: 1200px) {
+.container {
+  max-width: 100% !important;
+}
 
+@media (max-width: 1200px) {
   .vendas-cancelamento,
   .historico-mrr {
     margin-right: calc(-.5* var(--bs-gutter-x)) !important;
@@ -475,11 +479,22 @@ th {
     left: 0;
     padding: 0 !important;
   }
+
+  .cards-status, .clientes {
+    margin-top: 1rem !important;
+  }
 }
 
 @media (max-width: 991px) {
   .tickets {
     gap: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .cards-media-jornada {
+    display: flex;
+    gap: 1rem !important;
   }
 }
 
